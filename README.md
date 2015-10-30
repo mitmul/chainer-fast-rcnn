@@ -32,3 +32,8 @@ First you should prepare a sample image, and then
 ```
 $ python scripts/forward.py --img_fn sample.jpg --out_fn result.jpg
 ```
+
+### Result
+
+![](https://raw.githubusercontent.com/wiki/mitmul/chainer-fast-rcnn/images/result.jpg)
+'Overstekend wild' St. Janskerkhof Den Bosch &copy; FaceMePLS (https://farm7.staticflickr.com/6038/5891724192_6031648139_o_d.jpg)
