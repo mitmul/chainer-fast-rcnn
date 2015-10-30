@@ -63,6 +63,7 @@ def get_bboxes(orig_img, im_scale, dedup_boxes=1. / 16):
 
     return rects
 
+
 def draw_result(out, im_scale, clss, bbox, rects):
     out = cv.resize(out, None, None, fx=im_scale, fy=im_scale,
                     interpolation=cv.INTER_LINEAR)
@@ -94,7 +95,10 @@ def draw_result(out, im_scale, clss, bbox, rects):
             x2 = _center_x + 0.5 * _width
             y2 = _center_y + 0.5 * _height
 
-            cv.rectangle(out, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255))
+            cv.rectangle(out, (int(x1), int(y1)), (int(x2), int(y2)),
+                         (0, 0, 255))
+            cv.putText(out, CLASSES[cls_id], (int(x1), int(y2)),
+                       cv.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255))
 
     return out
 

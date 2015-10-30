@@ -1,5 +1,12 @@
 # chainer-fast-rcnn
 
+## Requirements
+
+- [OpenCV 3.0 with python bindings](http://opencv.org)
+- [Chainer 1.4](https://github.com/pfn/chainer)
+- [fast-rcnn](https://github.com/rbgirshick/fast-rcnn)
+- [dlib](https://github.com/davisking/dlib)
+
 ## Create symlinks
 
 Create a symlink from the location of original [fast-rcnn](https://github.com/rbgirshick/fast-rcnn) dir to this project's root dir. (The below line assumes a environment variable `$FAST_RCNN_HOME` has a path to the `fast-rcnn` source dir.)
