@@ -17,6 +17,14 @@ $ ln -s $FRCN_ROOT ./
 
 Make sure that all steps written in the `Installation (sufficient for the demo)` section of `README.md` in [fast-rcnn](https://github.com/rbgirshick/fast-rcnn) have been performed.
 
+## Convert model
+
+Convert caffemodel to chainermodel.
+
+```
+$ python scripts/load_net.py
+```
+
 ## Test
 
 First you should prepare a sample image, and then
