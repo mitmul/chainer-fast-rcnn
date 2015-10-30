@@ -1,0 +1,15 @@
+.DS_Store
+.remote-sync.json
+
+data
+fast-rcnn
+dlib
+
+*.so
+*.pyc
+*.jpg
+*.png
+*.pdf
+*.tif
+*.chainermodel
+*.caffemodel
