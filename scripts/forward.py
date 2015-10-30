@@ -57,7 +57,6 @@ def get_bboxes(orig_img, im_scale, min_size, dedup_boxes=1. / 16):
     _, index, inv_index = np.unique(hashes, return_index=True,
                                     return_inverse=True)
     rects = rects[index, :]
-    rects = np.asarray(rects, dtype=np.int32)
 
     return rects
 

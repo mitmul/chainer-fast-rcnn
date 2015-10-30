@@ -1,5 +1,7 @@
 # chainer-fast-rcnn
 
+It aims at reproducing results of [fast-rcnn](https://github.com/rbgirshick/fast-rcnn) using [Chainer](https://github.com/pfn/chainer). It can be run only with GPU because roi_pooling_2d layer has only GPU implementation.
+
 ## Requirements
 
 - [OpenCV 3.0 with python bindings](http://opencv.org)
