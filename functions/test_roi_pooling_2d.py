@@ -27,6 +27,7 @@ class TestROIPooling2D(unittest.TestCase):
         ], dtype=numpy.float32)
         self.gy = numpy.random.uniform(-1, 1,
                                        (4, 3, 7, 7)).astype(numpy.float32)
+        #    (4, 3, 7, 7)).astype(numpy.float32)
 
     def check_forward(self, x_data, roi_data):
         x = chainer.Variable(x_data)
@@ -51,7 +52,8 @@ class TestROIPooling2D(unittest.TestCase):
 
         func = y.creator
         f = lambda: func.forward((x.data, rois.data))
-        gx, = gradient_check.numerical_grad(f, (x.data,), (y.grad,))
+        gx, gr = gradient_check.numerical_grad(f, (x.data, rois.data),
+                                               (y.grad,))
 
         gradient_check.assert_allclose(cuda.to_cpu(gx), cuda.to_cpu(x.grad))
 
