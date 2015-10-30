@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
-sys.path.insert(0, 'fast-rcnn/caffe-fast-rcnn/build/install/python')
 sys.path.insert(0, 'models')
+sys.path.insert(0, 'fast-rcnn/caffe-fast-rcnn/build/install/python')
 import caffe
 from VGG import VGG
 import cPickle as pickle

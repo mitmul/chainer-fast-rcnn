@@ -5,41 +5,17 @@
 - [OpenCV 3.0 with python bindings](http://opencv.org)
 - [Chainer 1.4](https://github.com/pfn/chainer)
 - [fast-rcnn](https://github.com/rbgirshick/fast-rcnn)
-- [dlib](https://github.com/davisking/dlib)
+- [dlib v18.18](https://github.com/davisking/dlib)
 
-## Create symlinks
+## Create symlink
 
-Create a symlink from the location of original [fast-rcnn](https://github.com/rbgirshick/fast-rcnn) dir to this project's root dir. (The below line assumes a environment variable `$FAST_RCNN_HOME` has a path to the `fast-rcnn` source dir.)
-
-```
-$ ln -s $FAST_RCNN_HOME ./
-```
-
-Make sure that some cython extentions have been built. If not,
+Create a symlink from the location of original [fast-rcnn](https://github.com/rbgirshick/fast-rcnn) dir to this project's root dir. (The below line assumes a environment variable `$FRCN_ROOT` has a path to the `fast-rcnn` source dir.)
 
 ```
-$ cd $FAST_RCNN_HOME/lib
-$ make
+$ ln -s $FRCN_ROOT ./
 ```
 
-Create a symlink from [dlib](https://github.com/davisking/dlib) to this project's root dir. (The below line assumes a envirionment variable `$DLIB_HOME` contains a path to the `dlib` source dir.)
-
-```
-$ ln -s $DLIB_HOME ./
-```
-
-Make sure that `dlib` has been already built. If not,
-
-```
-$ cd $DLIB_HOME/python_examples
-$ ./compile_dlib_python_module.bat
-```
-
-## Load net
-
-```
-$ python scripts/load_net.py
-```
+Make sure that all steps written in the `Installation (sufficient for the demo)` section of `README.md` in [fast-rcnn](https://github.com/rbgirshick/fast-rcnn) have been performed.
 
 ## Test
 
